@@ -1,0 +1,332 @@
+/*
+$desktop: 1200px;
+$laptop: 1024px;
+$tablet: 768px;
+$phone: 480px;
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #08080d;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+.btn {
+  display: inline;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+.btn:hover {
+  background-color: #9da9ce;
+}
+header {
+  width: 100%;
+  height: fit-content;
+}
+/********************************************* NAV START *********************************************************************/
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav i {
+  padding-right: 0.5rem;
+}
+.nav-links {
+  display: flex;
+}
+.nav-links li {
+  padding: 0 1rem;
+}
+nav li a:hover {
+  color: #9da9ce;
+}
+.toggler {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  right: 5rem;
+}
+@media (max-width: 1100px) {
+  .nav-left {
+    display: none;
+  }
+  .nav-right ul {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    flex-direction: row;
+    align-items: flex-end;
+    text-align: start;
+  }
+  .nav-right li {
+    margin-left: 0.25rem;
+    text-align: center;
+    width: 100%;
+  }
+  .nav-right {
+    display: none;
+    width: 100%;
+    align-items: flex-end;
+  }
+  .toggler {
+    display: flex;
+  }
+  nav {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav-right.active {
+    display: flex;
+  }
+}
+/********************************************* NAV END *********************************************************************/
+/******************************************** HERO START *********************************************************************/
+.hero {
+  padding-top: 5rem;
+  margin: 2rem auto;
+  width: 100%;
+}
+.hero-container {
+  width: 80%;
+  height: 60vh;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.hero-container::after {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-container img {
+  border-radius: 1rem;
+  width: 100%;
+  object-position: center;
+  object-fit: fill;
+}
+.hero-container video {
+  border-radius: 1rem;
+  width: 100%;
+  object-position: center;
+  object-fit: fill;
+}
+.hero-content {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-content h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "poppins: italic";
+  color: #fff;
+}
+.btn-group {
+  padding-top: 1rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+/******************************************** HERO END *********************************************************************/
+/******************************************** FEATURED START *********************************************************************/
+.featured {
+  margin: auto;
+  width: 80%;
+  height: fit-content;
+  display: flex;
+}
+.categories {
+  width: 25%;
+}
+.products {
+  color: #fff;
+  width: 75%;
+  margin: 0 auto;
+}
+.category {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #fff;
+  margin-top: 1rem;
+  padding: 1rem 1rem;
+  width: 100%;
+  height: 70px;
+}
+.thumbnail {
+  width: 25%;
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 1rem;
+}
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.category:hover {
+  background-color: #9da9ce;
+}
+.category p {
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.category i {
+  font-size: 2rem;
+  padding-right: 0.5rem;
+}
+
+.products-inner {
+  width: 80%;
+  margin: auto;
+}
+.products-inner h1 {
+  font-size: 3rem;
+}
+.view {
+  color: #fff;
+}
+.view:hover {
+  color: #9da9ce;
+}
+/******************************************** CARDS START *********************************************************************/
+.cards {
+  margin: 2rem auto 0 auto;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.card {
+  position: relative;
+  padding: 0.5rem;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card img {
+  height: 300px;
+  object-position: center;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+.title {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.price {
+  color: #000;
+  font-weight: 700;
+}
+/******************************************** CARDS END *********************************************************************/
+/******************************************** FEATURED END *********************************************************************/
+/******************************************** FOOTER START *********************************************************************/
+footer {
+  background-color: #1f1f1f;
+  font-size: 0.9rem;
+  text-align: start;
+  padding: 1rem;
+  margin-top: 5rem;
+  height: fit-content;
+  width: 100%;
+}
+.footer-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+footer h3 {
+  color: #36454f;
+  margin-bottom: 1rem;
+}
+footer a {
+  color: #f8f8ff;
+}
+footer a:hover {
+  color: #9da9ce;
+}
+.copyright {
+  color: #36454f;
+  width: 100%;
+  grid-column: 2/5;
+  padding-top: 2rem;
+}
+.footer-text {
+  font-size: 0.65rem;
+  color: #fff;
+}
+form {
+  margin-top: 1rem;
+}
+form input {
+  padding: 0.25rem;
+}
+form button {
+  cursor: pointer;
+  padding: 0.25rem;
+  background: #f8f8ff;
+  color: #000;
+  border: none;
+}
+/******************************************** FOOTER END *********************************************************************/
+/******************************************** MEDIA QUERY ********************************************************************/
